@@ -1,0 +1,13 @@
+.booking-section {
+    background-color: #f8f9fa; /* Adjust as needed */
+}
+
+.booking-section h3,
+.booking-section p {
+    color: #333; /* Adjust text color */
+}
+
+.booking-section .calendly-inline-widget {
+    border: none;
+    min-height: 650px;
+}
