@@ -32,6 +32,7 @@
 </title>
 
   <link rel="stylesheet" href="./assets/css/tierprice.css">
+  <link rel="stylesheet" href="./assets/css/newsletter.css">
 
 <!--     Fonts and icons     -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -66,7 +67,7 @@
 <div class="container position-sticky z-index-sticky top-0"><div class="row"><div class="col-12">
 <nav class="navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
   <div class="container-fluid px-0">
-    <a class="navbar-brand font-weight-bolder ms-sm-3" href="https://entrepriseapisolution.com" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
+    <a class="navbar-brand font-weight-bolder ms-sm-3" href="https://entrepriseapisolution.com" rel="tooltip" title="Entreprise Api Solution" data-placement="bottom" target="_blank">
       Entreprise Api Solution
     </a>
     <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -91,7 +92,7 @@
         </li>
 
         <li class="nav-item dropdown dropdown-hover mx-2">
-          <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" href="javascript:;" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" href="./pages/blog" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
             Blog
           </a>
         </li>
@@ -531,6 +532,28 @@
 
   <!-- -------  END OF TIER PRICE    -------- -->
 
+  <!-- Newsletter Sign-Up Section -->
+  <section class="newsletter-section py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <h3 class="mb-4">Stay Updated!</h3>
+          <p class="mb-5">Subscribe to our newsletter to receive the latest news and exclusive offers.</p>
+          <form  class="form-inline justify-content-center">
+            <div class="row gx-2">
+              <div class="col-md-8">
+                <input type="email" class="form-control" name="email" placeholder="Enter your email address" required>
+              </div>
+              <div class="col-md-4">
+                <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
 <!-- -------   START PRE-FOOTER 2 - simple social line w/ title & 3 buttons    -------- -->
 <div class="pt-5">
   <div class="container">
@@ -715,7 +738,7 @@
 
 
 
-
+  <script src="./assets/js/newsletter.js"></script>
 
 
 <!-- Control Center for Soft UI Kit: parallax effects, scripts for the example pages etc -->

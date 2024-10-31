@@ -1,0 +1,13 @@
+.newsletter-section {
+    background-color: #f8f9fa; /* Light background */
+    padding: 60px 0;
+}
+
+.newsletter-section .form-control {
+    max-width: 400px;
+    width: 100%;
+}
+
+.newsletter-section .btn {
+    padding: 10px 30px;
+}
