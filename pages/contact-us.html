@@ -268,7 +268,8 @@
 <!-- Control Center for Soft UI Kit -->
 <script src="../assets/js/soft-design-system.min.js?v=1.0.9" type="text/javascript"></script>
 <!-- EmailJS SDK -->
-<script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
 
 <!-- EmailJS Form Submission -->
 <script type="text/javascript">
@@ -279,7 +280,7 @@
   function sendEmail(e) {
     e.preventDefault();
 
-    emailjs.sendForm('service_d5jq6jd', 'template_q4gellm', '#contact-form')
+    emailjs.sendForm('service_d5jq6jd', 'template_nnyt21w', '#contact-form')
             .then(function (response) {
               console.log('SUCCESS!', response.status, response.text);
               alert('Your message has been sent!');
