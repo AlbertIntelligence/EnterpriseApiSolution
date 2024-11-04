@@ -109,25 +109,26 @@
                 For further questions, including partnership opportunities, please email <a href="mailto:contact@enterpriseapisolution.com">contact@enterpriseapisolution.com</a> or use our contact form below.
               </p>
             </div>
-            <form id="contact-form" method="post" action="contact_form.php" autocomplete="off">
+            <!-- Modified Form -->
+            <form id="contact-form" onsubmit="sendEmail(event)" autocomplete="off">
               <div class="card-body pb-2">
                 <div class="row">
                   <div class="col-md-6">
                     <label for="full-name">Full Name</label>
                     <div class="input-group mb-4">
-                      <input class="form-control" id="full-name" name="full-name" placeholder="Full Name" aria-label="Full Name" type="text" required>
+                      <input class="form-control" id="full-name" name="from_name" placeholder="Full Name" aria-label="Full Name" type="text" required>
                     </div>
                   </div>
                   <div class="col-md-6 ps-md-2">
                     <label for="email">Email</label>
                     <div class="input-group">
-                      <input type="email" id="email" name="email" class="form-control" placeholder="you@example.com" required>
+                      <input type="email" id="email" name="reply_to" class="form-control" placeholder="you@example.com" required>
                     </div>
                   </div>
                 </div>
                 <div class="form-group mb-0 mt-md-0 mt-4">
                   <label for="message">How can we help you?</label>
-                  <textarea name="message" class="form-control" id="message" rows="6" placeholder="Describe your problem or inquiry in at least 250 characters" required></textarea>
+                  <textarea name="message" class="form-control" id="message" rows="6" placeholder="Describe your problem or inquiry" required></textarea>
                 </div>
                 <div class="row">
                   <div class="col-md-12 text-center">
@@ -267,6 +268,34 @@
 
 <!-- Control Center for Soft UI Kit -->
 <script src="../assets/js/soft-design-system.min.js?v=1.0.9" type="text/javascript"></script>
+<!-- EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+<script type="text/javascript">
+  (function () {
+    emailjs.init('YOUR_USER_ID'); // Replace 'YOUR_USER_ID' with your actual user ID
+  })();
+</script>
+
+<!-- EmailJS Form Submission -->
+<script type="text/javascript">
+  (function () {
+    emailjs.init('GmqSjeQuVgDM-O45I'); // Replace 'YOUR_PUBLIC_KEY' with your actual Public Key
+  })();
+
+  function sendEmail(e) {
+    e.preventDefault(); // Prevent the default form submission
+
+    emailjs.sendForm('service_d5jq6jd', 'template_q4gellm', '#contact-form')
+            .then(function (response) {
+              console.log('SUCCESS!', response.status, response.text);
+              alert('Your message has been sent!');
+              document.getElementById('contact-form').reset();
+            }, function (error) {
+              console.log('FAILED...', error);
+              alert('An error occurred. Please try again.');
+            });
+  }
+</script>
 </body>
 
 </html>
