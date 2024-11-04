@@ -35,7 +35,7 @@
 
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-
+  <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
   <!-- Nepcha Analytics -->
   <!-- Nepcha is an easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA, and PECR. -->
   <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
@@ -272,18 +272,18 @@
 <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
 <script type="text/javascript">
   (function () {
-    emailjs.init('YOUR_USER_ID'); // Replace 'YOUR_USER_ID' with your actual user ID
+    emailjs.init('YOUR_USER_ID');
   })();
 </script>
 
 <!-- EmailJS Form Submission -->
 <script type="text/javascript">
   (function () {
-    emailjs.init('GmqSjeQuVgDM-O45I'); // Replace 'YOUR_PUBLIC_KEY' with your actual Public Key
+    emailjs.init('GmqSjeQuVgDM-O45I');
   })();
 
   function sendEmail(e) {
-    e.preventDefault(); // Prevent the default form submission
+    e.preventDefault();
 
     emailjs.sendForm('service_d5jq6jd', 'template_q4gellm', '#contact-form')
             .then(function (response) {
